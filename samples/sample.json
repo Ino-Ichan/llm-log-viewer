@@ -1,0 +1,7 @@
+[
+  {"role": "system", "content": "You are a world-class math agent."},
+  {"role": "user", "content": "Please explain what is 1 + 1?"},
+  {"role": "assistant", "content": "Of course! The answer is 2. Let's break down why. ..."},
+  {"role": "user", "content": "Next question is ..."},
+  {"role": "assistant", "content": "Amazing! ..."}
+]
