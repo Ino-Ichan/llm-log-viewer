@@ -21,3 +21,11 @@ rfd = "0.14"
 opt-level = 3
 lto = true
 codegen-units = 1
+
+[package.metadata.bundle]
+name = "LLM Log Viewer"
+identifier = "dev.yuichi.llm-log-viewer"
+icon = ["assets/icon.icns"]
+category = "public.app-category.developer-tools"
+short_description = "LLM Log Viewer"
+image = { version = "0.1", default-features = false, features = ["png"] }

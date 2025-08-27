@@ -15,3 +15,5 @@
 # Logs/temp
 *.log
 tmp/
+
+app.iconset/

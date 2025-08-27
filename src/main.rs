@@ -4,9 +4,20 @@ use egui_commonmark::{CommonMarkCache, CommonMarkViewer};
 use serde::{Deserialize, Serialize};
 use std::{fs, path::Path};
 
+fn app_icon() -> egui::IconData {
+    // assets/icon.png は 256px 以上推奨（透過PNG）
+    let rgba = image::load_from_memory(include_bytes!("../assets/icon.png"))
+        .expect("failed to load icon.png")
+        .to_rgba8();
+    let (w, h) = rgba.dimensions();
+    egui::IconData { rgba: rgba.into_raw(), width: w, height: h }
+}
+
 fn main() -> Result<()> {
     let native_options = eframe::NativeOptions {
-        viewport: egui::ViewportBuilder::default().with_inner_size(Vec2::new(900.0, 700.0)),
+        viewport: egui::ViewportBuilder::default()
+            .with_inner_size(Vec2::new(900.0, 700.0))
+            .with_icon(app_icon()),
         ..Default::default()
     };
 
